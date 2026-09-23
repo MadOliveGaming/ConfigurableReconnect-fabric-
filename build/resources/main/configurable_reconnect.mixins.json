@@ -1,0 +1,20 @@
+{
+  "required": true,
+  "package": "madolivegaming.configurablereconnect.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "refmap": "configurable_reconnect.refmap.json",
+  "mixins": [
+    "LivingEntityMixin",
+    "PlayerMixin",
+    "ItemStackMixin",
+    "BlockItemMixin",
+    "BoneMealItemMixin",
+    "CommandsMixin",
+    "ExperienceOrbMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8.4"
+}

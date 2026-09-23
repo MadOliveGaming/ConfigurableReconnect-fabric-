@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "configurable_reconnect",
+  "version": "1.0.0",
+  "name": "Configurable Reconnect",
+  "authors": [
+    "MCreator"
+  ],
+  "contact": {
+    "homepage": "https://mcreator.net",
+    "sources": ""
+  },
+  "license": "Not specified",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "madolivegaming.configurablereconnect.ConfigurableReconnectMod"
+    ],
+    "client": [
+      "madolivegaming.configurablereconnect.ConfigurableReconnectModClient"
+    ]
+  },
+  "mixins": [
+    "configurable_reconnect.mixins.json"
+  ],
+  "accessWidener": "META-INF/configurable_reconnect.classtweaker",
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
