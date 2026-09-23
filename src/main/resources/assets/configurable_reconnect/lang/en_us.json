@@ -1,0 +1,8 @@
+{
+  "gui.configurable_reconnect.configurable_reconnect_gui.reconnect_delay_slider_suffix": " seconds",
+  "gui.configurable_reconnect.configurable_reconnect_gui.label_configurable_reconnect": "Configurable Reconnect Settings",
+  "gui.configurable_reconnect.configurable_reconnect_gui.label_delay": "Delay (default: 2)",
+  "gui.configurable_reconnect.configurable_reconnect_gui.reconnect_delay_slider_prefix": "",
+  "key.category.misc": "Configurable Reconnect",
+  "key.configurable_reconnect.mod_settings_screen_keybind": "Configurable Reconnect Settings"
+}

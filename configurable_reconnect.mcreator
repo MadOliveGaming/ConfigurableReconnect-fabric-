@@ -1,0 +1,202 @@
+{
+  "mod_elements": [
+    {
+      "name": "ReconnectButtonHandler",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "reconnect_button_handler",
+      "metadata": {
+        "files": [
+          "src/main/java/madolivegaming/configurablereconnect/ReconnectButtonHandler.java"
+        ]
+      }
+    },
+    {
+      "name": "InitializeReconnectButton",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "initialize_reconnect_button",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/madolivegaming/configurablereconnect/procedures/InitializeReconnectButtonProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "ReconnectDelayHelper",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "reconnect_delay_helper",
+      "metadata": {
+        "files": [
+          "src/main/java/madolivegaming/configurablereconnect/ReconnectDelayHelper.java"
+        ]
+      }
+    },
+    {
+      "name": "ConfigurableReconnectGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "configurable_reconnect_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/madolivegaming/configurablereconnect/world/inventory/ConfigurableReconnectGUIMenu.java",
+          "src/main/java/madolivegaming/configurablereconnect/client/gui/ConfigurableReconnectGUIScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "SetRecconectDelayOnGUICloses",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_recconect_delay_on_gui_closes",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/madolivegaming/configurablereconnect/procedures/SetRecconectDelayOnGUIClosesProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "ModSettingsScreenKeybind",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mod_settings_screen_keybind",
+      "metadata": {
+        "files": [
+          "src/main/java/madolivegaming/configurablereconnect/network/ModSettingsScreenKeybindMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "CorrectTextWhenGuiOpened",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "correct_text_when_gui_opened",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/madolivegaming/configurablereconnect/procedures/CorrectTextWhenGuiOpenedProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "OpenModSettingsGUI",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_mod_settings_gui",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/madolivegaming/configurablereconnect/procedures/OpenModSettingsGUIProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "OpenReconnectConfigProcedure",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "open_reconnect_config_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/madolivegaming/configurablereconnect/OpenReconnectConfigProcedure.java"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "reconnect_delay",
+      "type": "number",
+      "scope": "map",
+      "value": "2.0"
+    }
+  ],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "gui.configurable_reconnect.configurable_reconnect_gui.reconnect_delay_slider_suffix": " seconds",
+      "gui.configurable_reconnect.configurable_reconnect_gui.label_configurable_reconnect": "Configurable Reconnect Settings",
+      "gui.configurable_reconnect.configurable_reconnect_gui.label_delay": "Delay (default: 2)",
+      "gui.configurable_reconnect.configurable_reconnect_gui.reconnect_delay_slider_prefix": "",
+      "key.category.misc": "Configurable Reconnect",
+      "key.configurable_reconnect.mod_settings_screen_keybind": "Configurable Reconnect Settings"
+    }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/madolivegaming/configurablereconnect/init/ConfigurableReconnectModMenus.java",
+      "src/main/java/madolivegaming/configurablereconnect/init/ConfigurableReconnectModScreens.java",
+      "src/main/java/madolivegaming/configurablereconnect/network/MenuStateUpdateMessage.java",
+      "src/main/java/madolivegaming/configurablereconnect/init/ConfigurableReconnectModKeyMappingsServer.java",
+      "src/main/java/madolivegaming/configurablereconnect/init/ConfigurableReconnectModKeyMappings.java",
+      "src/main/java/madolivegaming/configurablereconnect/init/ConfigurableReconnectModProcedures.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/madolivegaming/configurablereconnect/mixin/ExperienceOrbMixin.java",
+      "src/main/java/madolivegaming/configurablereconnect/network/ConfigurableReconnectModVariables.java",
+      "src/main/resources/fabric.mod.json",
+      "src/main/java/madolivegaming/configurablereconnect/event/ItemEvents.java",
+      "src/main/java/madolivegaming/configurablereconnect/ConfigurableReconnectModClient.java",
+      "src/main/resources/META-INF/configurable_reconnect.classtweaker",
+      "src/main/java/madolivegaming/configurablereconnect/mixin/BlockItemMixin.java",
+      "src/main/java/madolivegaming/configurablereconnect/event/PlayerEvents.java",
+      "src/main/java/madolivegaming/configurablereconnect/mixin/ItemStackMixin.java",
+      "src/main/resources/configurable_reconnect.mixins.json",
+      "src/main/java/madolivegaming/configurablereconnect/event/LivingEntityEvents.java",
+      "src/main/java/madolivegaming/configurablereconnect/event/MiscEvents.java",
+      "src/main/java/madolivegaming/configurablereconnect/mixin/LivingEntityMixin.java",
+      "src/main/java/madolivegaming/configurablereconnect/event/BlockEvents.java",
+      "src/main/java/madolivegaming/configurablereconnect/mixin/CommandsMixin.java",
+      "src/main/java/madolivegaming/configurablereconnect/ConfigurableReconnectMod.java",
+      "src/main/java/madolivegaming/configurablereconnect/mixin/PlayerMixin.java",
+      "src/main/java/madolivegaming/configurablereconnect/mixin/BoneMealItemMixin.java"
+    ]
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "configurable_reconnect",
+    "modName": "Configurable Reconnect",
+    "version": "1.0.0",
+    "author": "MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "fabric-26.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "madolivegaming.configurablereconnect"
+  },
+  "mcreatorVersion": 202600233518
+}
