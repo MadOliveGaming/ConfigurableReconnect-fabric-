@@ -1,0 +1,10 @@
+{
+  "_fv": 89,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "NUMLOCK",
+    "keyBindingName": "Configurable Reconnect Settings",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": "OpenModSettingsGUI"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "_fv": 89,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 208,
+    "height": 100,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": true,
+    "components": [
+      {
+        "type": "slider",
+        "data": {
+          "name": "reconnect_delay_slider",
+          "min": 1.0,
+          "max": 60.0,
+          "value": 2.0,
+          "step": 1.0,
+          "prefix": "",
+          "suffix": " seconds",
+          "width": 170,
+          "height": 20,
+          "x": 128,
+          "y": 138,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_configurable_reconnect",
+          "text": {
+            "fixedValue": "Configurable Reconnect Settings"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 130,
+          "y": 85,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_delay",
+          "text": {
+            "fixedValue": "Delay (default: 2)"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 128,
+          "y": 124,
+          "locked": false
+        }
+      }
+    ],
+    "onOpen": "CorrectTextWhenGuiOpened",
+    "onClosed": "SetRecconectDelayOnGUICloses",
+    "gridSettings": {
+      "sx": 4,
+      "sy": 7,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}
