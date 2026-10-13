@@ -3,14 +3,16 @@
   "id": "configurable_reconnect",
   "version": "1.0.0",
   "name": "Configurable Reconnect",
+  "description": "Adds a reconnect button to the pause menu when on servers with a configurable delay.",
   "authors": [
-    "MCreator"
+    "MadOliveGaming"
   ],
   "contact": {
-    "homepage": "https://mcreator.net",
+    "homepage": "https://modrinth.com/mod/configurable-reconnect",
     "sources": ""
   },
-  "license": "Not specified",
+  "license": "MIT License",
+  "icon": "logo.png",
   "environment": "*",
   "entrypoints": {
     "main": [

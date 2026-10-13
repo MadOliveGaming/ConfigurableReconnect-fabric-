@@ -2,6 +2,6 @@
   "pack": {
     "min_format": 101.1,
     "max_format": 101.1,
-    "description": ""
+    "description": "Adds a reconnect button to the pause menu when on servers with a configurable delay."
   }
 }

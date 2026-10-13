@@ -54,7 +54,7 @@
       "name": "SetRecconectDelayOnGUICloses",
       "type": "procedure",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "set_recconect_delay_on_gui_closes",
       "metadata": {
         "dependencies": [
@@ -91,10 +91,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ],
         "files": [
@@ -126,13 +122,25 @@
           "src/main/java/madolivegaming/configurablereconnect/OpenReconnectConfigProcedure.java"
         ]
       }
+    },
+    {
+      "name": "ReconnectDelayConfig",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "reconnect_delay_config",
+      "metadata": {
+        "files": [
+          "src/main/java/madolivegaming/configurablereconnect/ReconnectDelayConfig.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
     {
       "name": "reconnect_delay",
       "type": "number",
-      "scope": "map",
+      "scope": "global",
       "value": "2.0"
     }
   ],

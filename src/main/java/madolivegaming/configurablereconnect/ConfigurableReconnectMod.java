@@ -38,11 +38,11 @@ public class ConfigurableReconnectMod implements ModInitializer {
 	public void onInitialize() {
 		// Start of user code block mod constructor
 		// End of user code block mod constructor
-		LOGGER.info("Initializing ConfigurableReconnectMod");
-		ConfigurableReconnectModVariables.variablesLoad();
+		LOGGER.info("Initializing ConfigurableReconnectMod 123");
 		ConfigurableReconnectModMenus.load();
 		ConfigurableReconnectModProcedures.load();
 		ConfigurableReconnectModKeyMappingsServer.serverLoad();
+		ConfigurableReconnectModVariables.variablesLoad();
 		tick();
 		// Start of user code block mod init
 		// End of user code block mod init

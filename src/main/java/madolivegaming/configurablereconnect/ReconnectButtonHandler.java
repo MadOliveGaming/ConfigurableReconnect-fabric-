@@ -1,6 +1,7 @@
 package madolivegaming.configurablereconnect;
 
 import madolivegaming.configurablereconnect.network.ConfigurableReconnectModVariables;
+import madolivegaming.configurablereconnect.network.ReconnectDelayHelper;
 
 import net.fabricmc.fabric.api.client.screen.v1.ScreenEvents;
 
@@ -58,11 +59,7 @@ public class ReconnectButtonHandler {
                     Component.literal("Reconnect"),
                     button -> {
 
-                        double reconnectDelay =
-                            ConfigurableReconnectModVariables
-                                .MapVariables
-                                .get(null)
-                                .reconnect_delay;
+                        double reconnectDelay = ReconnectDelayHelper.get();
 
                         reconnectDelay =
                             Math.max(0.0, reconnectDelay);

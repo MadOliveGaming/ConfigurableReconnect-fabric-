@@ -1,6 +1,8 @@
 package madolivegaming.configurablereconnect.client.gui;
 
 import madolivegaming.configurablereconnect.network.ConfigurableReconnectModVariables;
+import madolivegaming.configurablereconnect.network.ReconnectDelayHelper;
+import madolivegaming.configurablereconnect.network.ReconnectDelayConfig;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -69,26 +71,23 @@ public class ConfigurableReconnectGUIScreen extends AbstractContainerScreen<Conf
 	}
 
 	@Override
-	protected void extractLabels(GuiGraphicsExtractor guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.text(this.font, Component.translatable("gui.configurable_reconnect.configurable_reconnect_gui.label_configurable_reconnect"), 20, 15, -12829636, false);
-		guiGraphics.text(this.font, Component.translatable("gui.configurable_reconnect.configurable_reconnect_gui.label_delay"), 18, 54, -12829636, false);
-	}
-
-	@Override
 	public void init() {
 		super.init();
-		reconnect_delay_slider = new ConfigurableReconnectModScreens.ExtendedSlider(this.leftPos + 18, this.topPos + 68, 170, 20, Component.translatable("gui.configurable_reconnect.configurable_reconnect_gui.reconnect_delay_slider_prefix"),
+		reconnect_delay_slider = new ConfigurableReconnectModScreens.ExtendedSlider(
+				this.leftPos + 18, this.topPos + 68, 170, 20,
+				Component.translatable("gui.configurable_reconnect.configurable_reconnect_gui.reconnect_delay_slider_prefix"),
 				Component.translatable("gui.configurable_reconnect.configurable_reconnect_gui.reconnect_delay_slider_suffix"),
 				1,
 				60,
-				ConfigurableReconnectModVariables.MapVariables.get(null).reconnect_delay,
+				ReconnectDelayHelper.get(),
 				1,
 				0,
 				true
-				) {
+		) {
 			@Override
 			protected void applyValue() {
-    			ConfigurableReconnectModVariables.MapVariables.get(null).reconnect_delay = this.getValue();
+				ReconnectDelayHelper.set(this.getValue());
+    			ReconnectDelayConfig.save();
 			}
 		};
 		this.addRenderableWidget(reconnect_delay_slider);

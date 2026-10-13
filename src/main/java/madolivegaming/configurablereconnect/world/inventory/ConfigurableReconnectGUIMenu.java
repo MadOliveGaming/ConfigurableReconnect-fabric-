@@ -99,7 +99,7 @@ public class ConfigurableReconnectGUIMenu extends AbstractContainerMenu implemen
 		// are still their default 0 values. Also only execute it on the server menu:
 		// running it on the client as well makes effects such as sounds happen twice.
 		if (this.entity instanceof ServerPlayer) {
-			CorrectTextWhenGuiOpenedProcedure.execute(world, entity);
+			CorrectTextWhenGuiOpenedProcedure.execute(entity);
 		}
 	}
 
