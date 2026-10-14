@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "configurable_reconnect",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "Configurable Reconnect",
   "description": "Adds a reconnect button to the pause menu when on servers with a configurable delay.",
   "authors": [
@@ -20,7 +20,10 @@
     ],
     "client": [
       "madolivegaming.configurablereconnect.ConfigurableReconnectModClient"
-    ]
+    ],
+    "voicechat": [
+      "madolivegaming.configurablereconnect.network.RejoinVoicechatPlugin"
+	]
   },
   "mixins": [
     "configurable_reconnect.mixins.json"

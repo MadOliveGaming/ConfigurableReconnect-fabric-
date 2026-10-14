@@ -11,6 +11,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.input.KeyEvent;
+import net.minecraft.client.gui.components.Checkbox;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 
@@ -23,15 +24,22 @@ public class ConfigurableReconnectGUIScreen extends AbstractContainerScreen<Conf
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
 	private ConfigurableReconnectModScreens.ExtendedSlider reconnect_delay_slider;
+	private Checkbox rejoin_voicechat_checkbox;
 	private static final Identifier BACKGROUND = Identifier.parse("configurable_reconnect:textures/screens/configurable_reconnect_gui.png");
 
-	public ConfigurableReconnectGUIScreen(ConfigurableReconnectGUIMenu container, Inventory inventory, Component text) {
-		super(container, inventory, text, 208, 100);
-		this.world = container.world;
-		this.x = container.x;
-		this.y = container.y;
-		this.z = container.z;
-		this.entity = container.entity;
+	public ConfigurableReconnectGUIScreen(
+        ConfigurableReconnectGUIMenu container,
+        Inventory inventory,
+        Component text) {
+    	super(container, inventory, text, 208, 100);
+    	this.world = container.world;
+    	this.x = container.x;
+    	this.y = container.y;
+    	this.z = container.z;
+    	this.entity = container.entity;
+
+    	// This screen has no inventory label to display.
+    	this.inventoryLabelY = 1000;
 	}
 
 	@Override
@@ -73,6 +81,8 @@ public class ConfigurableReconnectGUIScreen extends AbstractContainerScreen<Conf
 	@Override
 	public void init() {
 		super.init();
+
+		// Reconnect delay slider widget
 		reconnect_delay_slider = new ConfigurableReconnectModScreens.ExtendedSlider(
 				this.leftPos + 18, this.topPos + 68, 170, 20,
 				Component.translatable("gui.configurable_reconnect.configurable_reconnect_gui.reconnect_delay_slider_prefix"),
@@ -91,5 +101,20 @@ public class ConfigurableReconnectGUIScreen extends AbstractContainerScreen<Conf
 			}
 		};
 		this.addRenderableWidget(reconnect_delay_slider);
+
+		// Rejoin svc checkbox widget
+		rejoin_voicechat_checkbox = Checkbox.builder(
+        	Component.literal("Rejoin voice chat"),
+        	this.font
+    	)
+    	.pos(this.leftPos + 18, this.topPos + 38)
+    	.selected(ConfigurableReconnectModVariables.rejoin_svc)
+    	.onValueChange((checkbox, selected) -> {
+        	ConfigurableReconnectModVariables.rejoin_svc = selected;
+        	ReconnectDelayConfig.save();
+    	})
+    	.build();
+
+		this.addRenderableWidget(rejoin_voicechat_checkbox);
 	}
 }

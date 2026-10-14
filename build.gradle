@@ -16,6 +16,15 @@ dependencies {
 
     // Fabric API
     implementation "net.fabricmc.fabric-api:fabric-api:0.155.2+26.2"
+
+    // Simple Voicechat
+    implementation "de.maxhenkel.voicechat:voicechat-api:2.6.24"
+}
+
+repositories {
+    maven {
+        url = 'https://maven.maxhenkel.de/repository/public'
+    }
 }
 
 // We need to do this because MCreator doesn't allow to split armor textures in multiple folders

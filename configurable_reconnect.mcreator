@@ -134,6 +134,30 @@
           "src/main/java/madolivegaming/configurablereconnect/ReconnectDelayConfig.java"
         ]
       }
+    },
+    {
+      "name": "RejoinVoicechatHelper",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "rejoin_voicechat_helper",
+      "metadata": {
+        "files": [
+          "src/main/java/madolivegaming/configurablereconnect/RejoinVoicechatHelper.java"
+        ]
+      }
+    },
+    {
+      "name": "RejoinVoicechatPlugin",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "rejoin_voicechat_plugin",
+      "metadata": {
+        "files": [
+          "src/main/java/madolivegaming/configurablereconnect/RejoinVoicechatPlugin.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -142,6 +166,12 @@
       "type": "number",
       "scope": "global",
       "value": "2.0"
+    },
+    {
+      "name": "rejoin_svc",
+      "type": "logic",
+      "scope": "global",
+      "value": "false"
     }
   ],
   "sound_elements": [],

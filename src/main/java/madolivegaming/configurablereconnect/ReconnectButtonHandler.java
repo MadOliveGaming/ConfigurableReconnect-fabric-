@@ -2,6 +2,8 @@ package madolivegaming.configurablereconnect;
 
 import madolivegaming.configurablereconnect.network.ConfigurableReconnectModVariables;
 import madolivegaming.configurablereconnect.network.ReconnectDelayHelper;
+import madolivegaming.configurablereconnect.network.RejoinVoicechatHelper;
+
 
 import net.fabricmc.fabric.api.client.screen.v1.ScreenEvents;
 
@@ -63,6 +65,8 @@ public class ReconnectButtonHandler {
 
                         reconnectDelay =
                             Math.max(0.0, reconnectDelay);
+
+                        RejoinVoicechatHelper.saveCurrentGroup();
 
                         /*
                          * Trigger the actual vanilla Disconnect button.
