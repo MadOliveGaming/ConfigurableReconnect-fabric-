@@ -1,6 +1,8 @@
 # Configurable Reconnect - MC 26.2
 
-This is a minecraft mod that requires Fabric and Fabric API. It adds a "Reconnect"button to the pause screen of the game, only when you are on a multiplayer server. Pressing this buttons will disconnect you back to the server list and then, after a delay, automatically reconnect you. This delay is set to 2 seconds by default, but can be changed by the player.
+This is a minecraft mod that requires Fabric and Fabric API. It adds a "Reconnect"button to the pause screen of the game, only when you are on a multiplayer server. Pressing this buttons will disconnect you back to the server list and then, after a delay, automatically reconnect you to the server you came from. Additionally, the mod is capable of reconnecting you to the Simple Voice Chat channel your were in before you reconnected assuming this channel still exists (this means it requires the channel to be occupied by someone else or to be set as persistent)
+
+The reconnect delay is 2 seconds by default and can be adjusted in the settings screen by pressing "Numlock" (can be changes though the vanilla keybinds menu). Currently it accepts values between 1 and 60 (inclusive) and adjusts lower and/or higher values to the nearest of those 2 numbers. You can also enable the voicechat rejoining through this menu, which is disabled by default.
 
 ## FAQ
 
