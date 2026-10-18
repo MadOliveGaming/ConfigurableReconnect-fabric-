@@ -8,7 +8,9 @@ The reconnect delay is 2 seconds by default and can be adjusted in the settings 
 
 #### Where can I download this mod as a ready to use file?
 
-The mod is available on Modrinth: https://modrinth.com/mod/configurable-reconnect/versions (if the page is unavailable it is still under review of the modrindth admins)
+All releasea of the mod are downloadable under releases on thia github.
+
+If ypu preffer using a mod launcher, the mod is also available on Modrinth: https://modrinth.com/mod/configurable-reconnect/versions (if the page is unavailable it is still under review of the modrindth admins)
 
 #### Is there a Forge version?
 
